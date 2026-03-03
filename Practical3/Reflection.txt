@@ -1,0 +1,3 @@
+I think it is not hard to follow every step, but I will explain it anyway. But it is really confusing to understand the meaning of every step. I will explain it step by step.
+And it will be difficult for us to push forward the project by ourselves, because we are not familiar with those codes and don't know the logic behind it.
+What's more, we can't figure out which step we are at and if we made some mistakes without ai's help.
