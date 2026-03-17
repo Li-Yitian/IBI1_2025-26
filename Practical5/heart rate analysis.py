@@ -20,4 +20,19 @@ print("High heart rates number:", high)
 categories = {"Low": low, "Normal": normal, "High": high}
 max_category = max(categories, key=categories.get)
 print("Most common heart rate category:", max_category)
+import matplotlib.pyplot as plt
+#pie chart of heart rate categories
+labels = categories.keys()
+sizes = categories.values()
+colors = ['lightcoral', 'lightblue', 'lightgreen']
+labels = ["Low (<60)", "Normal (60-120)", "High (>120)"]
+sizes = [low, normal, high]
 
+def show_count(pct):
+    total = sum(sizes)
+    return int(round(pct * total / 100))
+
+# 绘制饼图
+plt.pie(sizes, labels=labels, autopct=show_count)
+plt.title("Heart Rate Category Distribution")
+plt.show()
