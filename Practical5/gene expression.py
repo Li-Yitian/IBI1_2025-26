@@ -23,7 +23,7 @@ plt.show()
 gene_of_interest = input("Enter the gene name to check its expression level: ")
 if gene_of_interest in gene_expression:
     print(f"Expression level of {gene_of_interest}: {gene_expression[gene_of_interest]}")
-else:
+else:#if the gene is not found, print an error message
     print(f"Error:{gene_of_interest} not found in the gene expression data.")
 import numpy as np
 average_expression = np.mean(list(gene_expression.values()))
