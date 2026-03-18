@@ -33,6 +33,6 @@ def show_count(pct):
     return int(round(pct * total / 100))
 
 # 绘制饼图
-plt.pie(sizes, labels=labels, autopct=show_count)
+plt.pie(sizes, labels=labels, autopct=lambda pct: f"{int(pct/100*sum(sizes))} people")
 plt.title("Heart Rate Category Distribution")
 plt.show()
