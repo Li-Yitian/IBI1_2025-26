@@ -32,4 +32,4 @@ plt.ylabel("Population Growth Rate (%)")
 plt.title("Population Growth Rate from 2020 to 2024")
 plt.ylim(-5, 5)
 plt.axhline(0, color='gray', linewidth=0.8)
-plt.show()
+plt.show()#check the code
