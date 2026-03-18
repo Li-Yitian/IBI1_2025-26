@@ -16,11 +16,17 @@ sorted_change = sorted(percentage_change.items(), key=lambda x: x[1], reverse=Tr
 print("\nPopulation growth rate in descending order:")
 for country, change in sorted_change:
     print(f"{country}: {round(change, 2)}%")    
+#print the country with the highest population growth rate using the sorted list
+highest_growth_country = sorted_change[0][0]
+print(f"\nCountry with the highest population growth rate: {highest_growth_country}")       
+#print the country with the lowest population growth rate using the sorted list 
+lowest_growth_country = sorted_change[-1][0]
+print(f"Country with the lowest population growth rate: {lowest_growth_country}")
 #create a bar chart of population growth rate for each country
 import matplotlib.pyplot as plt
 countries = list(percentage_change.keys())
 growth_rates = list(percentage_change.values())
-plt.bar(countries, growth_rates, color=['lightcoral', 'lightblue', 'lightgreen', 'lightyellow', 'lightpink'])
+plt.bar(countries, growth_rates, color=['lightcoral', 'lightblue', 'lightgreen', 'yellow', 'lightpink'])
 plt.xlabel("Country")
 plt.ylabel("Population Growth Rate (%)")
 plt.title("Population Growth Rate from 2020 to 2024")
