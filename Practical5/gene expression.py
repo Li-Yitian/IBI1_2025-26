@@ -20,10 +20,11 @@ plt.xticks(rotation=45)
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.tight_layout()
 plt.show()
-gene_of_interest = "TP53"
+gene_of_interest = input("Enter the gene name to check its expression level: ")
 if gene_of_interest in gene_expression:
     print(f"Expression level of {gene_of_interest}: {gene_expression[gene_of_interest]}")
 else:
-    print(f"{gene_of_interest} not found in the gene expression data.")
-avergage_expression = np.mean(list(gene_expression.values()))
+    print(f"Error:{gene_of_interest} not found in the gene expression data.")
+import numpy as np
+average_expression = np.mean(list(gene_expression.values()))
 print(f"Average expression level: {average_expression}")
