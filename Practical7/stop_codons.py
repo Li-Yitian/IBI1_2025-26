@@ -3,7 +3,7 @@ start_codon = "ATG"
 stop_codons = {"TAA", "TAG", "TGA"}
 #input sequence
 input_file="C:\\Users\\24367\\Desktop\\GITHUB\\IBI1_2025-26\\Practical7\\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
-output_file="stop_genes.fa"
+output_file="C:\\Users\\24367\\Desktop\\GITHUB\\IBI1_2025-26\\Practical7\\stop_genes.fa"
 valid_genes = []
 current_name = None
 current_sequence = ""
@@ -55,7 +55,7 @@ with open(input_file, "r") as f:
             valid_genes.append((current_name, current_sequence, stops_in_frame))
 with open(output_file, "w") as f:
     for name, seq, stops in valid_genes:
-        stop_str = ", ".join(sorted(stops))
+        stop_str = " ".join(sorted(stops))
         f.write(f">{name} {stop_str}\n")
         for i in range(0, len(seq), 80):
              f.write(seq[i:i+80] + "\n")
