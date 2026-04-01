@@ -12,9 +12,9 @@ with open(input_file, "r") as f:
     for line in f:
         line = line.strip()
         if not line:
-            continue
+            continue#skip empty lines
         if line.startswith(">"):
-            if current_name is not None and current_sequence!="":
+            if current_name is not None and current_sequence!="":#handle the previous genes
                 seq=current_sequence
                 stops_in_frame=set()
                 #look for the first ATG
