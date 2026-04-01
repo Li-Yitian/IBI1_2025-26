@@ -9,7 +9,6 @@ ALL_STOP_CODONS = {"TAA", "TAG", "TGA"}
 
 # File paths (same as your stop_codons.py, no need to modify)
 INPUT_FILE = "C:\\Users\\24367\\Desktop\\GITHUB\\IBI1_2025-26\\Practical7\\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
-PIECHART_OUTPUT = "C:\\Users\\24367\\Desktop\\GITHUB\\IBI1_2025-26\\Practical7\\codon_frequency_pie.png"
 
 # Initialize a default dictionary to count codon frequencies (auto-initialize to 0)
 codon_frequency = defaultdict(int)
@@ -23,7 +22,7 @@ while True:
         break
     else:
         print("Error! Invalid stop codon. Please enter only TAA, TAG or TGA:")
-
+PIECHART_OUTPUT = f"C:\\Users\\24367\\Desktop\\GITHUB\\IBI1_2025-26\\Practical7\\codon_pie_{target_stop}.png"
 # Step 2: Read FASTA file and process each gene sequence
 current_gene_name = None
 current_sequence = ""
