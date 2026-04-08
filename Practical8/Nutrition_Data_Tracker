@@ -1,0 +1,42 @@
+#create food_item class
+class food_item:
+    def __init__(self, name, calories, protein, carbs, fat):
+        self.name = name
+        self.calories = calories
+        self.protein = protein
+        self.carbs = carbs
+        self.fat = fat
+#calculate total calories
+def calculate_daily_intake(food_list):
+        total_calories = 0
+        total_protein = 0
+        total_carbs = 0
+        total_fat = 0
+        #print the food name
+        print("Food consumed:")
+        for food in food_list:
+            print(f"- {food.name}")
+        for food in food_list:
+            total_calories += food.calories
+            total_protein += food.protein
+            total_carbs += food.carbs
+            total_fat += food.fat
+        print(f"Total daily intake: {total_calories} cal, {total_protein}g protein, {total_carbs}g carbs, {total_fat}g fat")
+        print()  
+        #check if intake is within recommended limits
+        if total_calories > 2500:
+            print("Warning: Total calorie intake exceeds recommended limit of 2500 cal.")
+        if total_fat > 90:
+            print("Warning: Total fat intake exceeds recommended limit of 90g.")
+#example usage
+if __name__ == "__main__":
+    apple = food_item("apple", 95, 0.5, 25, 0.3)
+    banana = food_item("banana", 105, 1.3, 27, 0.3)
+    chicken_breast = food_item("chicken breast", 165, 31, 0, 3.6)
+    daily_food_list = [apple, banana, chicken_breast]
+    calculate_daily_intake(daily_food_list)
+    #wrong example usage
+    junk_food = food_item("junk food", 3000, 10, 50, 200)
+    daily_food_list.append(junk_food)
+    calculate_daily_intake(daily_food_list)
+#output
