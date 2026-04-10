@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: get the total of 10 random numbers between 1 and 10, and print the total.
+# Answer: Print the sum of 10 random numbers - progress starts at 0 and goes to 10 (11 iterations)
 
 # Import libraries
 # randint allows drawing a random number,

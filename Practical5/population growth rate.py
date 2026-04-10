@@ -22,6 +22,19 @@ print(f"\nCountry with the highest population growth rate: {highest_growth_count
 #print the country with the lowest population growth rate using the sorted list 
 lowest_growth_country = sorted_change[-1][0]
 print(f"Country with the lowest population growth rate: {lowest_growth_country}")
+#similar to the previous part, but change = (population in 2024 - population in 2020) instead of percentage change
+change= {}
+#define population_2020 and population_2024 dictionaries
+population_2020 = {country: data["2020"] for country, data in population_data.items()}
+population_2024 = {country: data["2024"] for country, data in population_data.items()}
+for country, population in population_2024.items():
+    change[country] = population - population_2020[country]
+#print the country that population increased the most using the change dictionary
+highest_increase_country = max(change, key=change.get)
+print(f"\nCountry with the highest population increase: {highest_increase_country}")
+#print the country that population decreased the most using the change dictionary
+lowest_increase_country = min(change, key=change.get)
+print(f"Country with the lowest population decrease: {lowest_increase_country}")
 #create a bar chart of population growth rate for each country
 import matplotlib.pyplot as plt
 countries = list(percentage_change.keys())
