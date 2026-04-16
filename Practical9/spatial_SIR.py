@@ -31,8 +31,8 @@ step=100
 #start the simulation
 for step in range(1, step + 1):
     new_pop = population.copy()
-    infected_x, infected_y = np.where(population == 1)
-    for x, y in zip(infected_x, infected_y):
+    infected_x, infected_y = np.where(population == 1)#find the coordinates of the infected cells
+    for x, y in zip(infected_x, infected_y):#define the 8 neighboring cells
         neighbors = [
             (x-1, y-1), (x-1, y), (x-1, y+1),
             (x, y-1),            (x, y+1),
@@ -40,7 +40,7 @@ for step in range(1, step + 1):
         ]
 
         for nx, ny in neighbors:
-            if 0 <= nx < 100 and 0 <= ny < 100:
+            if 0 <= nx < 100 and 0 <= ny < 100:#make sure the neighbor is within the grid
                 if population[nx, ny] == 0:
                     if np.random.rand() < beta:
                         new_pop[nx, ny] = 1
