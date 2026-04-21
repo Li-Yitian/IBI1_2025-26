@@ -1,0 +1,11 @@
+Research Question:
+What was the distribution of DALYs across all countries in 2019?
+
+Starting line number in main Python file: line 39
+
+Result Discussion:
+In 2019, the global DALYs values of all countries show an obvious right-skewed uneven distribution.
+Most countries have low and medium DALYs burden, with only a small number of countries holding extremely high DALYs values.
+The maximum DALYs value among all countries is 25877, belonging to Papua New Guinea.
+This result is in line with expectation: developing regions with insufficient medical resources, poor public health conditions and frequent endemic diseases will bear much higher disease burden.
+The overall low median value proves that most regions worldwide have controlled overall disease burden well.

@@ -35,3 +35,11 @@ plt.xlabel("Year")
 plt.ylabel("DALYs")
 plt.title("DALYs over time")
 plt.show()
+
+#question: What was the distribution of DALYs across all countries in 2019?
+dalys_2019 = dalys_data[dalys_data['Year'] == 2019]
+plt.hist(dalys_2019['DALYs'], bins=20)
+plt.xlabel("DALYs")
+plt.ylabel("Frequency")
+plt.title("Distribution of DALYs in 2019")
+plt.show()
